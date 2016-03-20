@@ -1,0 +1,164 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f5f4f0;
+}
+
+#main-container {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+header {
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+header h1 {
+    margin: 5px;
+    font-size: 4em;
+}
+#new-game {
+    display: block;
+    padding: 10px 10px;
+    margin: 10px auto;
+    width: 100px;
+    cursor: pointer;
+    background-color:#8f7a66;
+    font-size: .8em;
+    color:white;
+    border-radius:10px;
+}
+#new-game:hover {
+    background-color:#9f8b77;
+}
+.score {
+    float: left;
+    width: 50%;
+    padding-top: 10px;
+    margin: 0;
+    font-size: 1em;
+}
+.score span {
+    font-size: 1.5em;
+}
+
+#game2048-container {
+    position: relative;
+    width: 80%;
+    padding-bottom: 80%;
+    margin: 0 auto;
+    background-color: #bbada0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#game-over-layer {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30% 0;
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 100%;
+    text-align: center;
+    color: #f90;
+    word-wrap: break-word;
+    word-break: normal;
+    background: #eee;
+    background: rgba(255, 255, 255, 0.75);
+    overflow: hidden;
+}
+
+.grid {
+    position: absolute;
+    z-index: 1;
+    border-radius: 6px;
+    background-color:#ccc0b3;
+}
+
+.cell {
+    position: absolute;
+    z-index: 2;
+    border-radius: 6px;
+    font-weight:bold;
+    font-size:60px;
+    line-height:100px;
+    text-align:center;
+}
+.cell-val2 {
+    color: #8f7a66;
+    background-color: #eee4da;
+    font-size: 100%;
+}
+.cell-val4 {
+    color: #8f7a66;
+    background-color: #ede0c8;
+    font-size: 100%;
+}
+.cell-val8 {
+    color: #eee;
+    background-color: #f2b179;
+    font-size: 100%;
+}
+.cell-val16 {
+    color: #eee;
+    background-color: #f59563;
+    font-size: 100%;
+}
+.cell-val32 {
+    color: #eee;
+    background-color: #f67c5f;
+    font-size: 100%;
+}
+.cell-val64 {
+    color: #eee;
+    background-color: #f65e3b;
+    font-size: 100%;
+}
+.cell-val128 {
+    color: #eee;
+    background-color: #edcf72;
+    font-size: 85%;
+}
+.cell-val256 {
+    color: #eee;
+    background-color: #edcc61;
+    font-size: 85%;
+}
+.cell-val512 {
+    color: #eee;
+    background-color: #9c0;
+    font-size: 85%;
+}
+.cell-val1024 {
+    color: #eee;
+    background-color: #33b5e5;
+    font-size: 70%;
+}
+.cell-val2048 {
+    color: #eee;
+    background-color: #09c;
+    font-size: 70%;
+}
+.cell-val4096 {
+    color: #eee;
+    background-color: #a6c;
+    font-size: 70%;
+}
+.cell-val8192 {
+    color: #eee;
+    background-color: #93c;
+    font-size: 70%;
+}
