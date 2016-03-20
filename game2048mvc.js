@@ -371,14 +371,15 @@ function Game2048View(gameModel, ctrlEle) {
     // touch and move events for mobile devices
     var lastX, lastY;
     this._ctrlEle.$container.on('touchstart', function(e) {
-        lastX = e.originalEvent.pageX;
-        lastY = e.originalEvent.pageY;
+        e.preventDefault();
+        lastX = e.originalEvent.changedTouches[0].pageX;
+        lastY = e.originalEvent.changedTouches[0].pageY;
     });
     this._ctrlEle.$container.on('touchend', function(e) {
         var deltaX, deltaY;
 
-        deltaX = e.originalEvent.pageX - lastX;
-        deltaY = e.originalEvent.pageY - lastY;
+        deltaX = e.originalEvent.changedTouches[0].pageX - lastX;
+        deltaY = e.originalEvent.changedTouches[0].pageY - lastY;
 
         if (Math.abs(deltaX) > Math.abs(deltaY)) {          // move horizontally
             if (deltaX > 0) _this.rightKeyPressed.notify(); // move right
@@ -389,7 +390,8 @@ function Game2048View(gameModel, ctrlEle) {
         }
     });
     this._ctrlEle.$container.on('touchmove', function(e) {
-        return false;   // prevent page moving
+        e.preventDefault();
+        e.stopPropagation();
     });
 
     this.init();
